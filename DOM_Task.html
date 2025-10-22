@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale = 1.0">
+        <title>DOM Methods</title>
+        <style>
+            .btn{
+                color: rgb(251, 251, 253);
+                margin: 40px;
+                padding: 0;
+                width: 90px;
+                height: 50px;
+                border-style: none;
+                background-color: rgb(96, 8, 178);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Welcome All!</h1>
+        <button onclick="changeTextAndStyle()" class="btn"> Change Me</button>
+        <p id="changeText" onmouseover="changeTexts()">I am a Paragraph and change to text in JS. </p>
+
+
+    <script>
+
+    function changeTextAndStyle(){
+        // select a element by using getElementById() 
+                 let change = document.getElementById("title");
+        // change a Element Text
+                change.innerHTML = "Hii , Have a Great Day";
+
+        // change a Element style 
+               change.style.color = "blue";
+               change.style.fontSize = "40px";
+               change.style.textAlign = "center";
+               change.style.backgroundColor = "yellow";
+              }
+
+        // change a paragraph content
+     function changeTexts(){
+            document.getElementById("changeText").innerHTML = "I am Changed to onmouseover."
+            document.getElementById("changeText").style.color = "blue";
+            document.getElementById("changeText").style.fontStyle = "Italic";
+            document.getElementById("changeText").style.fontSize = "20px";
+
+     }
+  
+     // create a paragraph using appendChild() method
+            let para = document.createElement("p");
+            para.textContent = "This Paragraph is used to created  DOM Methods . ";
+            document.body.appendChild(para);
+
+        </script>
+    </body>
+</html>
